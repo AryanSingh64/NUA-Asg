@@ -23,8 +23,6 @@ const productQuery = (id: string) =>
 
 export const Route = createFileRoute("/product/$id")({
   validateSearch: (search) => searchSchema.parse(search),
-  loader: ({ params, context }) =>
-    context.queryClient.ensureQueryData(productQuery(params.id)),
   component: ProductDetail,
   errorComponent: ({ error }) => (
     <div style={{ padding: "8rem 2rem", textAlign: "center" }}>
