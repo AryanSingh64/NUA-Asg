@@ -14,11 +14,11 @@ A premium, highly considered e-commerce web application designed for **nua Studi
 
 ### Desktop Landing & Capsule Header
 
-![nua Studio Hero Landing](docs/hero_preview.png)
+![nua Studio Hero Landing](docs/hero_preview.jpg)
 
-### Dynamic Product Details & Persistent Cart Drawer
+### Product Collection & Scrolled Capsule Header
 
-![nua Studio Product Detail View](docs/details_preview.png)
+![nua Studio Product Collection](docs/listing_preview.png)
 
 ---
 
