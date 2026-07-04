@@ -1,0 +1,67 @@
+@use "../../styles/mixins" as *;
+
+.section {
+  @include container;
+  padding-top: clamp(4rem, 10vw, 8rem);
+  padding-bottom: clamp(2rem, 6vw, 4rem);
+  scroll-margin-top: 80px;
+}
+
+.head {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: end;
+  margin-bottom: clamp(2rem, 5vw, 4rem);
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--border);
+
+  @include mobile {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+}
+
+.headLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.eyebrow {
+  @include eyebrow;
+  margin: 0;
+}
+
+.title {
+  font-size: clamp(2.2rem, 5vw, 3.6rem);
+  color: var(--ink-900);
+}
+
+.blurb {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--fg-muted);
+  max-width: 42ch;
+  margin: 0;
+  justify-self: end;
+
+  @include mobile {
+    justify-self: start;
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: clamp(1rem, 2vw, 2rem);
+
+  @media (max-width: 1024px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (max-width: 767px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}

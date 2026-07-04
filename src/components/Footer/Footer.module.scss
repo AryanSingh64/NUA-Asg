@@ -1,0 +1,248 @@
+@use "../../styles/mixins" as *;
+
+.footer {
+  margin-top: clamp(4rem, 10vw, 8rem);
+}
+
+.hero {
+  position: relative;
+  min-height: 380px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 32px 32px 0 0;
+  overflow: hidden;
+  color: var(--cream-50);
+  display: flex;
+  align-items: center;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      110deg,
+      rgba(14, 27, 19, 0.85) 0%,
+      rgba(14, 27, 19, 0.6) 50%,
+      rgba(14, 27, 19, 0.3) 100%
+    );
+  }
+}
+
+.heroInner {
+  position: relative;
+  @include container;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  max-width: 720px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.eyebrow {
+  @include eyebrow;
+  color: rgba(251, 249, 243, 0.75);
+  margin: 0;
+}
+
+.headline {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  color: var(--cream-50);
+}
+
+.blurb {
+  color: rgba(251, 249, 243, 0.85);
+  font-size: 0.95rem;
+  max-width: 46ch;
+  margin: 0;
+}
+
+.form {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  max-width: 460px;
+  background: rgba(251, 249, 243, 0.12);
+  border: 1px solid rgba(251, 249, 243, 0.35);
+  border-radius: var(--radius-pill);
+  padding: 0.35rem;
+  backdrop-filter: blur(8px);
+
+  input {
+    flex: 1;
+    background: transparent;
+    border: 0;
+    color: var(--cream-50);
+    padding: 0.6rem 1rem;
+    font-family: inherit;
+    font-size: 0.9rem;
+
+    &::placeholder {
+      color: rgba(251, 249, 243, 0.55);
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  button {
+    @include button-reset;
+    background: var(--cream-50);
+    color: var(--moss-900);
+    padding: 0.7rem 1.4rem;
+    border-radius: var(--radius-pill);
+    font-size: 0.75rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    font-weight: 600;
+
+    &:hover {
+      background: var(--moss-100);
+    }
+  }
+}
+
+.bottom {
+  background: var(--moss-950);
+  color: var(--cream-200);
+  padding: 4rem 0;
+}
+
+.bottomInner {
+  @include container;
+  display: grid;
+  grid-template-columns: 1.5fr 2fr;
+  gap: 4rem;
+
+  @include mobile {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+.brandCol {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-display);
+  font-size: 2.6rem;
+  font-weight: 700;
+  font-style: italic;
+  text-transform: lowercase; /* just nua */
+  letter-spacing: -0.02em;
+  color: var(--cream-50);
+  line-height: 1;
+  width: max-content;
+  transition: color 0.25s;
+
+  &:hover {
+    color: var(--moss-300);
+  }
+}
+
+.tagline {
+  color: var(--moss-300);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  max-width: 32ch;
+  margin: 0;
+}
+
+.columns {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+
+  @include mobile {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  h4 {
+    font-family: var(--font-body);
+    font-size: 0.72rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--moss-300);
+    margin: 0 0 1rem;
+    font-weight: 500;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+
+    li {
+      font-size: 0.88rem;
+      color: var(--cream-200);
+      cursor: pointer;
+      transition: color 0.2s;
+
+      &:hover {
+        color: var(--cream-50);
+      }
+    }
+  }
+}
+
+.brandCol {
+  @include mobile {
+    grid-column: 1 / -1;
+  }
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-display);
+  letter-spacing: 0.24em;
+  color: var(--cream-50);
+  margin: 0 0 1rem;
+  font-size: 1rem;
+}
+
+.mark {
+  display: inline-grid;
+  place-items: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--cream-50);
+  color: var(--moss-900);
+}
+
+.tagline {
+  color: var(--moss-300);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  max-width: 34ch;
+  margin: 0;
+}
+
+.fine {
+  @include container;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(251, 249, 243, 0.1);
+  font-size: 0.78rem;
+  color: var(--moss-300);
+  flex-wrap: wrap;
+
+  p {
+    margin: 0;
+  }
+}

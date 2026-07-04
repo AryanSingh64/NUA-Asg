@@ -1,0 +1,116 @@
+/*
+ * Global stylesheet for the Aesthetica mini-store.
+ *
+ * NOTE: this project uses Sass/SCSS modules per assignment spec.
+ * Tailwind is intentionally NOT loaded here — shadcn ui components
+ * are unused. Design tokens live below; component styles live in
+ * *.module.scss files next to each component.
+ */
+
+:root {
+  /* Palette — nature-inspired, borrowed from the brief */
+  --moss-950: #0e1b13;
+  --moss-900: #14251a;
+  --moss-800: #1e3524;
+  --moss-700: #2c4a34;
+  --moss-500: #5a7a55;
+  --moss-300: #a8bfa0;
+  --moss-100: #dbe4d3;
+
+  --cream-50: #fbf9f3;
+  --cream-100: #f5f0e6;
+  --cream-200: #ebe3d1;
+  --sand-400: #c9b99a;
+  --sand-600: #8b7355;
+
+  --ink-900: #14140f;
+  --ink-700: #3a3a33;
+  --ink-500: #6a6a60;
+  --ink-300: #b7b5ab;
+
+  --danger: #a83b2a;
+  --warn: #b8791f;
+  --success: #4a6741;
+
+  /* Semantic */
+  --bg: var(--cream-50);
+  --surface: #ffffff;
+  --fg: var(--ink-900);
+  --fg-muted: var(--ink-500);
+  --border: #e6e0d1;
+  --accent: var(--moss-800);
+  --accent-fg: var(--cream-50);
+
+  /* Type */
+  --font-display:
+    "Instrument Serif", "Cormorant Garamond", ui-serif, Georgia, serif;
+  --font-body:
+    "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  /* Rhythm */
+  --radius-sm: 6px;
+  --radius: 14px;
+  --radius-lg: 24px;
+  --radius-pill: 999px;
+
+  --shadow-sm: 0 1px 2px rgba(20, 37, 26, 0.06);
+  --shadow: 0 10px 30px -12px rgba(20, 37, 26, 0.18);
+  --shadow-lg: 0 30px 60px -20px rgba(20, 37, 26, 0.28);
+
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  margin: 0;
+  line-height: 1.05;
+}
+
+:focus-visible {
+  outline: 2px solid var(--moss-800);
+  outline-offset: 3px;
+}
+
+::selection {
+  background: var(--moss-800);
+  color: var(--cream-50);
+}
