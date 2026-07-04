@@ -17,11 +17,14 @@
   background: var(--cream-100);
   border-radius: var(--radius);
   overflow: hidden;
-  display: grid;
-  place-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   transition: background 0.35s;
 
   img {
+    width: auto;
+    height: auto;
     max-width: 78%;
     max-height: 78%;
     object-fit: contain;
