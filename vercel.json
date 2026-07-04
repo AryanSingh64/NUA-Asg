@@ -1,3 +1,4 @@
 {
-  "outputDirectory": ".vercel/output"
+  "outputDirectory": ".vercel/output",
+  "cleanUrls": true
 }
