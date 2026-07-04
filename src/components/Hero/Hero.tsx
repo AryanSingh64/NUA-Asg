@@ -1,6 +1,6 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
-import heroImg from "../../assets/hero-daisies.jpg";
+import heroImg from "../../assets/hero-daisies.webp";
 import styles from "./Hero.module.scss";
 
 export function Hero() {

@@ -1,5 +1,5 @@
 import { toast } from "sonner";
-import textureImg from "../../assets/texture-daisies.jpg";
+import textureImg from "../../assets/texture-daisies.webp";
 import styles from "./Footer.module.scss";
 
 export function Footer() {
