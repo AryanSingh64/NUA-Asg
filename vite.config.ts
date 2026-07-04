@@ -5,6 +5,11 @@ import tsConfigPaths from "vite-tsconfig-paths";
 import tailwindcss from "@tailwindcss/vite";
 import path from "path";
 
+// Set Nitro/Vinxi preset for Vercel builds programmatically
+if (process.env.VERCEL) {
+  process.env.SERVER_PRESET = "vercel";
+}
+
 export default defineConfig({
   plugins: [
     tailwindcss(),
