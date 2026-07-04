@@ -12,7 +12,8 @@ const productsQuery = queryOptions({
   staleTime: 5 * 60_000,
 });
 
-export const Route = createFileRoute("/")({\n  component: HomePage,
+export const Route = createFileRoute("/")({
+  component: HomePage,
   errorComponent: ({ error }) => (
     <div style={{ padding: "4rem 2rem", textAlign: "center" }}>
       <p>Could not load the collection: {error.message}</p>
